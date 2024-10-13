@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Proyectos de ejemplo
     const projects = [
-        { name: 'Cinema App', category: 'app', image: '/images/cinemaapp.png', 
+        { name: 'Cinema App', category: 'app', image: '/portafoliumGaboGarcia/images/cinemaapp.png', 
             description: 'Proyecto de aplicación enfocado en un app que permite gestionar la visualización de detalles de películas, selección de asientos y funciones, compra de boletos y generación de tickets digitales. Incluye características como reseñas de usuarios, recomendaciones personalizadas y opciones de pago diversas. API para una experiencia de usuario fluida y eficiente.' },
-        { name: 'Music Player App', category: 'app', image: '/images/musicapp.png', 
+        { name: 'Music Player App', category: 'app', image: '/portafoliumGaboGarcia/images/musicapp.png', 
             description: 'Proyecto web centrado en una plataforma para reproducir música, visualizar álbumes y explorar artistas. La página cuenta con un diseño responsivo y una interfaz amigable, ofreciendo una experiencia de usuario atractiva y accesible en cualquier dispositivo.' },
-        { name: 'SpaceX Dragon Flight Control UI', category: 'web', image: '/images/spacex.png', 
+        { name: 'SpaceX Dragon Flight Control UI', category: 'web', image: '/portafoliumGaboGarcia/images/spacex.png', 
             description: 'Proyecto emulador de la página web de SpaceX Dragon Flight Control UI. Ofrece información detallada y diseños de los controles para simular el vuelo de la nave espacial Dragon, proporcionando una experiencia inmersiva y educativa.' }
     ];
 
