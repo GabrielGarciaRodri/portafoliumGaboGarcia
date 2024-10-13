@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel - Backend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href=></a>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="leftside">
+                <h1>¡HOLA!<br>SOY GABRIEL</h1>
+                <h2>Backend Developer</h2>
+                <div class="cta-buttons">
+                    <button class="btn-primary">
+                        <a href="#contact">Hire me</a>   
+                    </button>
+                    <button class="btn-secondary">
+                        <a href="/docs/CvGabrielGarciaRodriguez (english).pdf" download> Download CV</a>
+                    </button>
+                </div>
+            </div>
+            <div class="rightside">
+                <img src="/images/developer.png" alt="Developer illustration">
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About <span>me</span></h2>
+            <p>Soy un desarrollador enfocado en la creación de aplicaciones web innovadoras y funcionales, con un enfoque en ofrecer experiencias de usuario excepcionales. Me especializo en el desarrollo de proyectos complejos que van desde plataformas multiplataforma hasta sistemas de gestión integrados, utilizando tecnologías modernas y mejores prácticas. Me encanta enfrentar nuevos desafíos y aprender continuamente para mejorar mis habilidades, siempre buscando soluciones eficientes y creativas para cada proyecto en el que participo.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My recent <span>projects</span></h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="app">App Design</button>
+                <button class="filter-btn" data-filter="database">Databases</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+            </div>
+            <div class="project-grid">
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Algún proyecto <span>en mente?</span></h2>
+            <div class="contenedor-contact">
+                <div class="leftside">
+                    <img src="/images/developer1.png" alt="Developer with chart illustration">
+                </div>
+                <div class="rightside">
+                    <form id="contact-form">
+                        <input type="text" placeholder="Tu Nombre" required>
+                        <input type="email" placeholder="Tu Email" required>
+                        <textarea placeholder="Tu Mensaje" required></textarea>
+                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#home" ><box-icon type='logo' name='facebook-circle'></box-icon></a>
+            <a href="#"><box-icon name='instagram' type='logo' ></box-icon></i></a>
+            <a href="#"><box-icon type='logo' name='github'></box-icon></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
