@@ -3,86 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel - Backend Developer</title>
+    <title>Gabriel García - Fullstack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
 <body>
+    <!-- Particles background -->
+    <div class="particles" id="particles"></div>
+
     <header id="main-header">
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="logo">Gabriel.dev</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
-        <a href=></a>
     </header>
 
     <main>
-        <section id="home">
-            <div class="leftside">
-                <h1>¡HOLA!<br>SOY GABRIEL</h1>
-                <h2>Backend Developer</h2>
-                <div class="cta-buttons">
-                    <button class="btn-primary">
-                        <a href="#contact">Hire me</a>   
-                    </button>
-                    <button class="btn-secondary">
-                        <a href="/portafoliumGaboGarcia/docs/CvGabrielGarciaRodriguez (english).pdf" download> Download CV</a>
-                    </button>
+        <section id="home" class="loading">
+            <div class="hero-content">
+                <h1>¡Hola! Soy <span class="highlight">Gabriel</span></h1>
+                <p class="subtitle">Developer especializado en crear soluciones robustas y escalables</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Contrátame
+                    </a>
+                    <a href="/portafoliumGaboGarcia/docs/CvGabrielGarciaRodriguez.pdf" download class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        Descargar CV
+                    </a>
                 </div>
             </div>
-            <div class="rightside">
-                <img src="/portafoliumGaboGarcia/images/developer.png" alt="Developer illustration">
+            <div class="hero-image">
+                <img src="/portafoliumGaboGarcia/images/imagen1.jpg" alt="Gabriel - Backend Developer">
             </div>
         </section>
 
-        <section id="about">
-            <h2>About <span>me</span></h2>
-            <p>Soy un desarrollador enfocado en la creación de aplicaciones web innovadoras y funcionales, con un enfoque en ofrecer experiencias de usuario excepcionales. Me especializo en el desarrollo de proyectos complejos que van desde plataformas multiplataforma hasta sistemas de gestión integrados, utilizando tecnologías modernas y mejores prácticas. Me encanta enfrentar nuevos desafíos y aprender continuamente para mejorar mis habilidades, siempre buscando soluciones eficientes y creativas para cada proyecto en el que participo.</p>
+        <section id="about" class="loading">
+            <h2 class="section-title">Sobre <span class="highlight">mí</span></h2>
+            <div class="about-content">
+                <p>Dev full-stack especializado en APIs RESTful y el desarrollo de aplicaciones web empresariales y soluciones móviles para iOS y Android. Mi enfoque técnico abarca desde el backend con NodeJS y NestJS utilizando bases de datos MongoDB, hasta el frontend con React y Quasar.</p>
+                <br>
+                <p>Gestiono ciclos completos de desarrollo, incluyendo control de versiones, publicación en App Store y configuración de infraestructuras cloud mediante Google Cloud Platform y AWS S3, optimizando buckets para almacenamiento y despliegue de aplicaciones.</p>
+                <br>
+                <p>Me motiva el aprendizaje continuo y el desarrollo profesional constante. Como excelente comunicador, disfruto colaborar en equipos multidisciplinarios, aportando mis habilidades en orientación al logro y comunicación efectiva.</p>
+                <br>
+                <p>Busco contribuir a proyectos desafiantes que fomenten mi crecimiento profesional mientras genero un impacto positivo a través de soluciones tecnológicas innovadoras.</p>
+            </div>
         </section>
 
-        <section id="projects">
-            <h2>My recent <span>projects</span></h2>
+        <section id="projects" class="loading">
+            <h2 class="section-title">Mis <span class="highlight">proyectos</span> recientes</h2>
             <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="app">App Design</button>
-                <button class="filter-btn" data-filter="database">Databases</button>
-                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="app">Aplicaciones</button>
+                <button class="filter-btn" data-filter="database">Bases de Datos</button>
+                <button class="filter-btn" data-filter="web">Desarrollo Web</button>
             </div>
-            <div class="project-grid">
+            <div class="project-grid" id="project-grid">
+                <!-- Los proyectos se cargarán con JavaScript -->
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Algún proyecto <span>en mente?</span></h2>
-            <div class="contenedor-contact">
-                <div class="leftside">
-                    <img src="/portafoliumGaboGarcia/images/developer1.png" alt="Developer with chart illustration">
+        <section id="contact" class="loading">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>¿Tienes algún proyecto <span class="highlight">en mente?</span></h2>
+                    <img src="/portafoliumGaboGarcia/images/developer1.png" alt="Colaboración" style="max-width: 100%; height: auto;">
                 </div>
-                <div class="rightside">
+                <div class="contact-form">
                     <form id="contact-form">
-                        <input type="text" placeholder="Tu Nombre" required>
-                        <input type="email" placeholder="Tu Email" required>
-                        <textarea placeholder="Tu Mensaje" required></textarea>
-                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                        <div class="form-group">
+                            <input type="text" name="from_name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="from_email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar mensaje
+                        </button>
                     </form>
                 </div>
             </div>
-            
         </section>
     </main>
 
     <footer>
         <div class="social-icons">
-            <a href="#home" ><box-icon type='logo' name='facebook-circle'></box-icon></a>
-            <a href="#"><box-icon name='instagram' type='logo' ></box-icon></i></a>
-            <a href="#"><box-icon type='logo' name='github'></box-icon></a>
+            <a href="https://www.linkedin.com/in/gabriel-garcia-rodri-/" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/GabrielGarciaRodri/portafoliumGaboGarcia" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/gabs_garciarr/" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
+        <p>&copy; 2025 Gabriel García. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
